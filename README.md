@@ -14,5 +14,6 @@ Bundled Frameworks.
 
 Tips
 ---------
+New to github? Check out [these](https://github.com/ryansukale/basecamp/wiki/Github-Resources) resources.
 
 Use the fingertext plugin with the "basecamp" snippet trigger to create a blank HTML page that automatically includes all the above files.
