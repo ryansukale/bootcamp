@@ -1,10 +1,12 @@
 basecamp
 ========
 So, you use Boostrap, Backbone and jQuery a lot?
+
 Tired of copy pasting code again and again?
+
 Is Notepad++ your favorite editor?
 
-Then you need come to basecamp.
+Then you need join the basecamp.
 
 Bundled Frameworks.
 ------------------
