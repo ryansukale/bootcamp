@@ -6,7 +6,7 @@ Tired of copy pasting code again and again?
 
 Is Notepad++ your favorite editor?
 
-Then you need join the basecamp.
+Then you need to join the basecamp.
 
 Bundled Frameworks.
 ------------------
