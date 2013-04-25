@@ -36,7 +36,8 @@ GLOBAL
 [>END<]!$[FingerTextData FingerTextData]@#
 div
 GLOBAL
-<div id="$[![]!]" class="$[![]!]">
+<div class="$[![]!]">
+	$[0[]0]
 </div>
 [>END<]!$[FingerTextData FingerTextData]@#
 bc-navbar
@@ -94,6 +95,23 @@ $('$[![default]!]').on('click',function(event){
 	$[0[]0]
 });
 [>END<]!$[FingerTextData FingerTextData]@#
+bc-btn
+GLOBAL
+<div class="btn $[![(opt)btn-primary|btn-info|btn-success|btn-warning|btn-danger|btn-inverse|btn-link|]!]">
+	$[0[]0]
+</div>
+[>END<]!$[FingerTextData FingerTextData]@#
+bc-block
+GLOBAL
+<div class="bc-block">
+	<div class="bc-title">
+		$[![default]!]
+	</div>
+	<div class="bc-content">
+		$[0[]0]
+	</div>
+</div>
+[>END<]!$[FingerTextData FingerTextData]@#
 bc-3col
 GLOBAL
 <div class="row">
@@ -132,39 +150,22 @@ GLOBAL
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<link href="css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/frameworks/bootstrap.min.css">
+		<link href="css/frameworks/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/frameworks/bootstrap-responsive.min.css">
+		
+		
+		
+		<!-- Sitewide common CSS stylesheet -->
+		<link rel="stylesheet" href="css/common.css">
+
+		
+		<!-- CSS specific to this page -->
+		<link rel="stylesheet" href="css/$[![]!].css">
+		
+		
+		<!-- Moving the utils stylesheet to the bottom -->
 		<link rel="stylesheet" href="css/utils.css">
-		
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-		
-		<!-- Unminified Scripts for Dev version -->
-		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/vendor/require.js"></script>
-		<script src="js/vendor/bootstrap.js"></script>
-		<script src="js/jquery-ui-1.10.0.custom.js"></script>
-		<script src="js/json2.js"></script>
-		<script src="js/underscore.js"></script>
-		<script src="js/backbone.js"></script>
-		<!-- ---------------------------------- -->
-		
-		<!-- Minified Scripts for Production version  -->
-		
-		<!--
-		<script src="js/jquery-1.9.1.min.js"></script>
-		<script src="js/vendor/require.js"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-		<script src="js/json2.js"></script>
-		<script src="js/underscore.min.js"></script>
-		<script src="js/backbone.min.js"></script>
-		-->
-		
-		<!-- ----------------------------------- -->
-		
-		<script src="js/$[![default]!].js"></script>
-		<link rel="stylesheet" href="css/$[![default]!].css">
 		
 		<style>
             body {
@@ -193,6 +194,34 @@ GLOBAL
         </div> <!-- /container -->
 
     </body>
+	
+	
+	<script src="js/frameworks/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+	<!-- Unminified Scripts for Dev version -->
+	
+	<script src="js/frameworks/jquery-1.9.1.min.js"></script>
+	<script src="js/frameworks/vendor/require.js"></script>
+	<script src="js/frameworks/vendor/bootstrap.js"></script>
+	<script src="js/frameworks/jquery-ui-1.10.0.custom.js"></script>
+	<script src="js/frameworks/json2.js"></script>
+	<script src="js/frameworks/underscore.js"></script>
+	<script src="js/frameworks/backbone.js"></script>
+	<!-- ---------------------------------- -->
+	
+	<!-- Minified Scripts for Production version  -->
+	
+	<!--
+	<script src="js/frameworks/vendor/require.js"></script>
+	<script src="js/frameworks/vendor/bootstrap.min.js"></script>
+	<script src="js/frameworks/jquery-ui-1.10.0.custom.min.js"></script>
+	<script src="js/frameworks/json2.js"></script>
+	<script src="js/frameworks/underscore.min.js"></script>
+	<script src="js/frameworks/backbone.min.js"></script>
+	-->
+	
+	<!-- Script specific to this page -->
+	<script src="js/$[![]!].js"></script>
+	
 </html>
 [>END<]!$[FingerTextData FingerTextData]@#
 $
