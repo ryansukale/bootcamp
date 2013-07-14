@@ -1,4 +1,4 @@
-basecamp
+bootcamp
 ========
 So, you use Bootstrap, Backbone and jQuery a lot?
 
