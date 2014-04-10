@@ -1,7 +1,6 @@
 //Uncomment lines to include libraries as needed
-
-var params = {
-    paths: {
+require.config({
+    paths : {
         //localstorage: "lib/backbone.localStorage",
         json2: "lib/json2",
         modernizr: "lib/modernizr-2.7.1.min",
@@ -20,8 +19,23 @@ var params = {
         },
         'underscore': {
             exports: '_'
+        },
+        'bootstrap': {
+          deps: ['jquery']
         }
     }
-};
+  });
 
-require.config(params);
+//Run scripts that have common functionality across all pages here.
+//TODO: This will probably need to be optimized based on these blogs, but this should do for now.
+//http://robdodson.me/blog/2012/11/18/a-require-dot-js-multipage-shimmed-site-how-to/
+//http://simonsmith.io/modular-html-components-with-requirejs/
+require(
+  ['jquery','underscore','backbone','json2','modernizr','bootstrap','jqueryUI']
+  ,
+  function($,_,Backbone) {
+    $(function(){
+      //Add functionality common to all pages here.
+    });
+  }
+);
