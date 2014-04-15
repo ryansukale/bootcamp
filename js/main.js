@@ -8,6 +8,7 @@ require.config({
         jquery: "lib/jquery-1.9.1.min",
         jqueryUI: "lib/jquery-ui-1.10.0.custom.min",
         underscore: "lib/underscore.min",
+        text: "plugins/text",
         backbone: "lib/backbone.min"
     },
     shim: {
@@ -26,6 +27,7 @@ require.config({
     }
   });
 
+//Load modules that are common to all of your pages
 //Run scripts that have common functionality across all pages here.
 //TODO: This will probably need to be optimized based on these blogs, but this should do for now.
 //http://robdodson.me/blog/2012/11/18/a-require-dot-js-multipage-shimmed-site-how-to/
