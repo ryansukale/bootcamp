@@ -58,3 +58,53 @@ MyApp.on('start', function(options) {
 
 
 var myModule = App.module(‘myModule’);
+
+App.module("myModule", function(){
+    // Create Your Module
+});
+
+App.module("myModule", function(myModule, App, Backbone, Marionette, $, _, customArg1, customArg2){
+    // Private Data And Functions
+    var privateData = "this is private data";
+
+    // Set to false if you want to manually initialize this module
+    // else this module will start when the parent module starts
+    // myModule.startWithParent = false;
+
+    var UsefulClass = function() {
+    	// ...
+    };
+
+    myModule.addInitializer(function() {
+        myModule.useful = new UsefulClass();
+        // More setup
+    });
+
+    myModule.addFinalizer(function() {
+        myModule.useful = null;
+        // More tear down
+    });
+
+    var privateFunction = function(){
+        console.log(privateData);
+    }
+
+    // Public Data And Functions
+    this.someData = "public data";
+
+    this.someFunction = function(){
+        privateFunction();
+        console.log(this.someData);
+    }
+}, customArg1, customArg2);
+
+// Modules can be started and stopped, just like the application
+
+
+myModule.on('before:start', function(options) {
+	// Do something .e.g. you can add more data to your options
+});
+
+myModule.on('before:stop', function(options) {
+	// Do something else
+});
