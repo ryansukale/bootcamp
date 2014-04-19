@@ -8,10 +8,9 @@ require(
 	function () {
     require(
     //Common modules like Modernizr, JSON, bootstrap etc have already been loaded in main.
-		['jquery','underscore','backbone','text!tmpl/sampleTmpl.txt'],
-			function ($,_,Backbone,sampleTmpl) {
-		    
-		    //'tmpl' contains the text cotents of the file that you loaded.
+		['jquery','underscore','backbone','marionette','text!tpl/sampleTmpl.txt'],
+			function ($,_,Backbone,Marionette,sampleTmpl) {		    
+		    //'sampleTmpl' contains the text contents of the file that you loaded.
 
 				$(function(){
 
