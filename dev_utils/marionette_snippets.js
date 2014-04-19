@@ -108,3 +108,25 @@ myModule.on('before:start', function(options) {
 myModule.on('before:stop', function(options) {
 	// Do something else
 });
+
+// A good strategy would be to use regions on the app, and then inside each
+// region, use a layout. A layout extends views so it can be used anywhere
+// that you can use a view. The cool thing is that a layout can in itself contain
+// regions thereby enabling you to nest layouts within layouts.
+MyLayout = Backbone.Marionette.Layout.extend({
+  template: "#layout-template",
+ 
+  regions: {
+    myRegion: "#some-div",
+    anotherRegion: ".another-element"
+  }
+});
+
+// However, the regions in the layout dont refer to anything
+// on the DOM until the layout has been rendered using show
+var myLayout = new MyLayout();
+MyApp.someRegion.show(myLayout);
+
+// Once you've rendered the layout, you now have direct access to all of the specified regions as region managers.
+layout.myRegion.show(new MenuView());
+layout.anotherRegion.show(new SubLayout()); // Note how you can show a sublayout in layout
